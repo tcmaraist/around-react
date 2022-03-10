@@ -1,23 +1,36 @@
-import React from 'react';
+import React from "react";
 
-function PopupWithForm() {
-    return (
-        <div className={`modal modal_type_${name} ${isOpen ? "modal_is-opened" : ""}`}>
-            <div className="">
-                <button
-                    type="button"
-                    className=""
-                    onClick={onClose}></button>
-                <h3 className={/* popup title */}></h3>
-                <form className="/* popup form */" name={name} noValidate>
-                    {children}
-                    <button type="submit" className="button /* popup button */">
-                        {buttonText}
-                    </button>
-                </form>
-            </div>
-        </div>
-    )
+function PopupWithForm({
+  title,
+  name,
+  onClose,
+  children,
+  buttonText = "Save",
+  isOpen,
+}) {
+  return (
+    <div
+      className={`modal modal_type_${name} ${isOpen ? "modal_is-opened" : ""}`}
+    >
+      <div className="modal__body">
+        <button
+          type="button"
+          className="modal__close-button"
+          onClick={onClose}
+        ></button>
+        <form className="form" name={name} noValidate>
+          <h2 className="form__title">{title}</h2>
+          {children}
+          <button
+            type="submit"
+            className="button form__save-button form__save-button_disabled"
+          >
+            {buttonText}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default PopupWithForm;

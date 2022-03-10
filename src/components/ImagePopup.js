@@ -2,22 +2,37 @@ import React from "react";
 
 function ImagePopup({ card, onClose }) {
   return (
-    <div className={`popup popup_type_image ${card ? "popup_is-opened" : ""}`}>
-      <div className="popup__content popup__content_content_image">
+    <div
+      className={`modal modal_type_preview ${card ? "popup_is-opened" : ""}`}
+    >
+      <div className="modal__body modal__body_type_preview">
         <button
           type="button"
-          className="popup__close"
+          className="modal__close-button button"
           onClick={onClose}
         ></button>
         <img
-          alt={card ? card.nam : ""}
+          alt={card ? card.name : ""}
           src={card ? card.link : ""}
-          className="popup__image"
+          className="modal__image"
         />
-        <p className="popup__caltion">{card ? card.name : ""}</p>
+        <h2 className="modal__title">{card ? card.name : ""}</h2>
       </div>
     </div>
   );
 }
 
 export default ImagePopup;
+/*
+<section className="modal modal_type_preview">
+  <div className="modal__body modal__body_type_preview">
+    <button
+      aria-label="close"
+      className="modal__close-button button"
+      type="button"
+    ></button>
+    <img className="modal__image" src="#" alt="#" />
+    <h2 className="modal__title"></h2>
+  </div>
+</section>;
+*/
