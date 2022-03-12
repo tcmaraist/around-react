@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/around-react/static/css/main.1b011fc4.css",
+    "main.js": "/around-react/static/js/main.b8a2155a.js",
+    "static/js/787.1c78f32b.chunk.js": "/around-react/static/js/787.1c78f32b.chunk.js",
+    "static/media/Inter-Medium.woff": "/around-react/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/around-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/around-react/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/header_logo.svg": "/around-react/static/media/header_logo.229667a1c52df21375a814f2b86d6197.svg",
+    "static/media/VectorLike.svg": "/around-react/static/media/VectorLike.3826c074a1b94b101e38.svg",
+    "index.html": "/around-react/index.html",
+    "static/media/Trash.svg": "/around-react/static/media/Trash.8cb59aa98088a1653f62.svg",
+    "static/media/VectorCardLikeActive.svg": "/around-react/static/media/VectorCardLikeActive.226461bd64622361ffb2.svg",
+    "static/media/close-button.svg": "/around-react/static/media/close-button.507ea2182e5ab2daf7b4.svg",
+    "static/media/VectorEdit.svg": "/around-react/static/media/VectorEdit.ff0fcb318a3974db48d1.svg",
+    "static/media/VectorAvatarEdit.svg": "/around-react/static/media/VectorAvatarEdit.a086f758840ae814ecde.svg",
+    "static/media/VectorAdd.svg": "/around-react/static/media/VectorAdd.54b1426515811a15ebaf.svg",
+    "main.1b011fc4.css.map": "/around-react/static/css/main.1b011fc4.css.map",
+    "main.b8a2155a.js.map": "/around-react/static/js/main.b8a2155a.js.map",
+    "787.1c78f32b.chunk.js.map": "/around-react/static/js/787.1c78f32b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b011fc4.css",
+    "static/js/main.b8a2155a.js"
+  ]
+}
