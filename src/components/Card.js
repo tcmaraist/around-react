@@ -15,7 +15,7 @@ function Card({ card, onCardClick }) {
       />
       <button type="button" className="card__delete-button button"></button>
       <div className="card__info">
-        <h2 className="card__title">{card.name}></h2>
+        <h2 className="card__title">{card.name}</h2>
         <div className="card__like-container">
           <button type="button" className="card__like-button button"></button>
           <p className="card__like-button-counter">{card.likes.length}</p>
