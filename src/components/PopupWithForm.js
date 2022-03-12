@@ -10,7 +10,7 @@ function PopupWithForm({
 }) {
   return (
     <div
-      className={`modal modal_type_${name} ${isOpen ? "modal_is-opened" : ""}`}
+      className={`modal modal_type_${name} ${isOpen ? "modal_is-open" : ""}`}
     >
       <div className="modal__body">
         <button

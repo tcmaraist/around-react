@@ -45,7 +45,7 @@ function App() {
       <PopupWithForm
         title="Edit Profile"
         name="edit"
-        isOpen={isEditAvatarPopupOpen}
+        isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}
       >
         <label>
