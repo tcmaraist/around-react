@@ -59,7 +59,7 @@ function App() {
             placeholder="Name"
             required
           />
-          <span className="form__error" id="form-name-error"></span>
+          <span className="form__error" id="form-name-error" />
           <input
             type="text"
             minLength="2"
@@ -70,7 +70,7 @@ function App() {
             placeholder="About Me"
             required
           />
-          <span className="form__error" id="form-about-error"></span>
+          <span className="form__error" id="form-about-error" />
         </label>
       </PopupWithForm>
       <PopupWithForm
@@ -91,7 +91,7 @@ function App() {
             placeholder="Title"
             required
           />
-          <span className="form__error" id="title-error"></span>
+          <span className="form__error" id="title-error" />
           <input
             type="url"
             name="link"
@@ -100,7 +100,7 @@ function App() {
             placeholder="Image Link"
             required
           />
-          <span className="form__error" id="image-url-error"></span>
+          <span className="form__error" id="image-url-error" />
         </label>
       </PopupWithForm>
 
@@ -119,7 +119,7 @@ function App() {
             placeholder="enter image link here"
             required
           />
-          <span className="form__error" id="avatar-error"></span>
+          <span className="form__error" id="avatar-error" />
         </label>
       </PopupWithForm>
 

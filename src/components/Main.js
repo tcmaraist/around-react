@@ -29,12 +29,12 @@ function Main({
       <section className="profile">
         <div className="profile__image-container">
           <div className="profile__overlay">
-            <button
+            <
               type="button"
               className="profile__avatar-button button"
               id="avatar-button"
               onClick={onEditAvatarClick}
-            ></button>
+            />
           </div>
           <img
             className="profile__image"
@@ -51,7 +51,7 @@ function Main({
               className="profile__edit-button button"
               type="button"
               onClick={onEditProfileClick}
-            ></button>
+            />
           </div>
           <p className="profile__about">{userDescription}</p>
         </div>
@@ -60,7 +60,7 @@ function Main({
           className="profile__add-button button"
           type="button"
           onClick={onAddPlaceClick}
-        ></button>
+        />
       </section>
 
       <section>
