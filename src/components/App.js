@@ -59,7 +59,7 @@ function App() {
             placeholder="Name"
             required
           />
-          <span className="form__error" id="form-name-error"></span>
+          <span className="form__error" id="form-name-error" />
           <input
             type="text"
             minLength="2"
@@ -70,7 +70,7 @@ function App() {
             placeholder="About Me"
             required
           />
-          <span className="form__error" id="form-about-error"></span>
+          <span className="form__error" id="form-about-error" />
         </label>
       </PopupWithForm>
       <PopupWithForm
