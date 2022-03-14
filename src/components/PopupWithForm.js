@@ -15,7 +15,7 @@ function PopupWithForm({
       <div className="modal__body">
         <button
           type="button"
-          className="modal__close-button"
+          className="modal__close-button button"
           onClick={onClose}
         ></button>
         <form className="form" name={name} noValidate>
