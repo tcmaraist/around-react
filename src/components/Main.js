@@ -16,11 +16,11 @@ function Main({
   React.useEffect(() => {
     api
       .getAppInfo()
-      .then(([cardData, userData]) => {
+      .then(([cardsData, userData]) => {
         setUserName(userData.name);
         setUserDescription(userData.about);
         setUserAvatar(userData.avatar);
-        setCards(cardData);
+        setCards(cardsData);
       })
       .catch((err) => console.err(err));
   }, []);
