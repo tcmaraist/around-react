@@ -29,7 +29,7 @@ function Main({
       <section className="profile">
         <div className="profile__image-container">
           <div className="profile__overlay">
-            <
+            <button
               type="button"
               className="profile__avatar-button button"
               id="avatar-button"
