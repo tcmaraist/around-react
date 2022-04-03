@@ -1,6 +1,6 @@
 import React from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import Api from "../utils/Api";
+import api from "../utils/Api";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
