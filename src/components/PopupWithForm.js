@@ -7,6 +7,7 @@ function PopupWithForm({
   children,
   buttonText = "Save",
   isOpen,
+  onSubmit,
 }) {
   return (
     <div
@@ -18,7 +19,7 @@ function PopupWithForm({
           className="modal__close-button button"
           onClick={onClose}
         />
-        <form className="form" name={name} noValidate>
+        <form className="form" name={name} noValidate onSubmit={onSubmit}>
           <h2 className="form__title">{title}</h2>
           {children}
           <button

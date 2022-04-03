@@ -1,5 +1,5 @@
 import React from "react";
-import api from "../utils/Api";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import Card from "./Card";
 
 function Main({
@@ -7,23 +7,12 @@ function Main({
   onAddPlaceClick,
   onEditAvatarClick,
   onCardClick,
+  onCardLike,
+  onCardDelete,
+  cards,
 }) {
-  const [userName, setUserName] = React.useState("");
-  const [userDescription, setUserDescription] = React.useState("");
-  const [userAvatar, setUserAvatar] = React.useState("");
-  const [cards, setCards] = React.useState([]);
+  const currentUser = React.useContext(CurrentUserContext);
 
-  React.useEffect(() => {
-    api
-      .getAppInfo()
-      .then(([cardsData, userData]) => {
-        setUserName(userData.name);
-        setUserDescription(userData.about);
-        setUserAvatar(userData.avatar);
-        setCards(cardsData);
-      })
-      .catch((err) => console.err(err));
-  }, []);
   return (
     <main>
       <section className="profile">
@@ -38,14 +27,14 @@ function Main({
           </div>
           <img
             className="profile__image"
-            src={userAvatar}
-            alt="user profile image"
+            src={currentUser.avatar}
+            alt={currentUser.name}
           />
         </div>
 
         <div className="profile__info">
           <div className="profile__info-group">
-            <h1 className="profile__name">{userName}</h1>
+            <h1 className="profile__name">{currentUser.name}</h1>
             <button
               aria-label="edit"
               className="profile__edit-button button"
@@ -53,7 +42,7 @@ function Main({
               onClick={onEditProfileClick}
             />
           </div>
-          <p className="profile__about">{userDescription}</p>
+          <p className="profile__about">{currentUser.about}</p>
         </div>
         <button
           aria-label="add"
@@ -66,7 +55,13 @@ function Main({
       <section>
         <ul className="cards">
           {cards.map((card) => (
-            <Card key={card._id} card={card} onCardClick={onCardClick} />
+            <Card
+              key={card._id}
+              card={card}
+              onCardClick={onCardClick}
+              onCardLike={onCardLike}
+              onCardDelete={onCardDelete}
+            />
           ))}
         </ul>
       </section>
