@@ -102,16 +102,6 @@ function App() {
     setSelectedCard(null);
   }
 
-  function handleUpdateAvatar({ avatar }) {
-    api
-      .updateProfilePicture(avatar)
-      .then((newUserData) => {
-        setCurrentUser(newUserData);
-        closeAllPopups();
-      })
-      .catch((err) => console.error(err));
-  }
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">

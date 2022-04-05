@@ -10,9 +10,7 @@ function PopupWithForm({
   onSubmit,
 }) {
   return (
-    <div
-      className={`modal modal_type_${name} ${isOpen ? "modal_is-open" : ""}`}
-    >
+    <div className={`modal modal_type_${name} ${isOpen && "modal_is-open"}`}>
       <div className="modal__body">
         <button
           type="button"
@@ -22,10 +20,7 @@ function PopupWithForm({
         <form className="form" name={name} noValidate onSubmit={onSubmit}>
           <h2 className="form__title">{title}</h2>
           {children}
-          <button
-            type="submit"
-            className="button form__save-button form__save-button_disabled"
-          >
+          <button type="submit" className="button form__save-button">
             {buttonText}
           </button>
         </form>
