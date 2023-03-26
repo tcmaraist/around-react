@@ -20,7 +20,7 @@ class Api {
 
   setUserInfo({ name, about }) {
     return fetch(`${this._baseUrl}/users/me`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
         name,
@@ -31,7 +31,7 @@ class Api {
 
   updateProfilePicture({ avatar }) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
         avatar,
@@ -47,7 +47,7 @@ class Api {
 
   addCard({ name, link }) {
     return fetch(`${this._baseUrl}/cards`, {
-      method: "POST",
+      method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
         name,
@@ -58,38 +58,38 @@ class Api {
 
   removeCard(cardID) {
     return fetch(`${this._baseUrl}/cards/${cardID}`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: this._headers,
     }).then(this._handleServerResponse);
   }
 
   toggleLike(cardId, like) {
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-      method: like ? "PUT" : "DELETE",
+      method: like ? 'PUT' : 'DELETE',
       headers: this._headers,
     }).then(this._handleServerResponse);
   }
 
   addLike(cardId) {
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-      method: "PUT",
+      method: 'PUT',
       headers: this._headers,
     }).then(this._handleServerResponse);
   }
 
   removeLike(cardId) {
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: this._headers,
     }).then(this._handleServerResponse);
   }
 }
 
 const api = new Api({
-  baseUrl: "https://around.nomoreparties.co/v1/group-12",
+  baseUrl: 'https://around.nomoreparties.co/v1/group-12',
   headers: {
-    authorization: "4921d172-e47d-477d-bceb-cfdae220d52e",
-    "Content-Type": "application/json",
+    authorization: `${process.env.REACT_APP_API_KEY}`,
+    'Content-Type': 'application/json',
   },
 });
 
